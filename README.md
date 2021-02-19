@@ -10,7 +10,7 @@ dependency_overrides:
   flutter_google_places:
     git:
       url: https://github.com/hoc081098/flutter_google_places.git
-      ref: 4fefbf5bfe6d7458521710764840f22af2cbbaa8
+      ref: 00159b26b6ccc58792b7273b8e637fefb46d1988
 ```
 
 # flutter_google_places
