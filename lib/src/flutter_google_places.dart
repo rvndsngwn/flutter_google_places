@@ -47,7 +47,7 @@ class PlacesAutocompleteWidget extends StatefulWidget {
   PlacesAutocompleteWidget({
     required this.apiKey,
     this.mode = Mode.fullscreen,
-    this.hint = "Search",
+    this.hint = 'Search',
     this.overlayBorderRadius,
     this.offset,
     this.location,
@@ -340,9 +340,9 @@ class _AppBarPlacesAutoCompleteTextFieldState
 
 class PoweredByGoogleImage extends StatelessWidget {
   final _poweredByGoogleWhite =
-      "packages/flutter_google_places/assets/google_white.png";
+      'packages/flutter_google_places_hoc081098/assets/google_white.png';
   final _poweredByGoogleBlack =
-      "packages/flutter_google_places/assets/google_black.png";
+      'packages/flutter_google_places_hoc081098/assets/google_black.png';
 
   const PoweredByGoogleImage({Key? key}) : super(key: key);
 
@@ -437,13 +437,13 @@ abstract class PlacesAutocompleteState extends State<PlacesAutocompleteWidget> {
     );
   }
 
-  Stream<SearchState> doSearch(String value) async* {
-    yield SearchState(true, null, value);
+  Stream<SearchState> doSearch(String text) async* {
+    yield SearchState(true, null, text);
 
     debugPrint(
-        '[flutter_google_places] input=$value location=${widget.location} origin=${widget.origin}');
+        '[flutter_google_places_hoc081098] input=$text location=${widget.location} origin=${widget.origin}');
     final res = await _places!.autocomplete(
-      value,
+      text,
       offset: widget.offset,
       location: widget.location,
       radius: widget.radius,
@@ -457,22 +457,22 @@ abstract class PlacesAutocompleteState extends State<PlacesAutocompleteWidget> {
     );
 
     if (res.errorMessage?.isNotEmpty == true ||
-        res.status == "REQUEST_DENIED") {
+        res.status == 'REQUEST_DENIED') {
       onResponseError(res);
+      yield SearchState(false, null, text);
+      return;
     }
 
     final sorted = res.predictions.sortedBy<num>((e) => e.distanceMeters);
     debugPrint(
-        '[flutter_google_places] sorted=${sorted.map((e) => e.distanceMeters).toList(growable: false)}');
-    yield SearchState(
-      false,
-      PlacesAutocompleteResponse(
-        status: res.status,
-        errorMessage: res.errorMessage,
-        predictions: sorted,
-      ),
-      value,
+        '[flutter_google_places_hoc081098] sorted=${sorted.map((e) => e.distanceMeters).toList(growable: false)}');
+    final response = PlacesAutocompleteResponse(
+      status: res.status,
+      errorMessage: res.errorMessage,
+      predictions: sorted,
     );
+    yield SearchState(false, response, text);
+    onResponse(response);
   }
 
   @override
@@ -507,7 +507,7 @@ class PlacesAutocomplete {
     required BuildContext context,
     required String apiKey,
     Mode mode = Mode.fullscreen,
-    String? hint = "Search",
+    String? hint = 'Search',
     BorderRadius? overlayBorderRadius,
     num? offset,
     Location? location,
@@ -522,7 +522,7 @@ class PlacesAutocomplete {
     ValueChanged<PlacesAutocompleteResponse>? onError,
     String? proxyBaseUrl,
     Client? httpClient,
-    String? startText = "",
+    String? startText = '',
     Duration? debounce,
     Location? origin,
   }) {

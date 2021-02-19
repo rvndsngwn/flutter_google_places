@@ -48,7 +48,7 @@ class PlacesAutocompleteFormField extends FormField<String> {
     this.controller,
     Icon? leading,
     String? initialValue,
-    String? hint = "Search",
+    String? hint = 'Search',
     Icon? trailing,
     VoidCallback? trailingOnTap,
     Mode mode = Mode.fullscreen,
@@ -74,7 +74,7 @@ class PlacesAutocompleteFormField extends FormField<String> {
           validator: validator,
           autovalidateMode: autovalidateMode,
           builder: (FormFieldState<String> field) {
-            final _TextFormFieldState state = field as _TextFormFieldState;
+            final state = field as _TextFormFieldState;
             final effectiveDecoration = inputDecoration
                 ?.applyDefaults(Theme.of(state.context).inputDecorationTheme);
             return PlacesAutocompleteField(
@@ -139,9 +139,10 @@ class _TextFormFieldState extends FormFieldState<String> {
       oldWidget.controller?.removeListener(_handleControllerChanged);
       widget.controller?.addListener(_handleControllerChanged);
 
-      if (oldWidget.controller != null && widget.controller == null)
+      if (oldWidget.controller != null && widget.controller == null) {
         _controller =
             TextEditingController.fromValue(oldWidget.controller!.value);
+      }
       if (widget.controller != null) {
         setValue(widget.controller!.text);
         if (oldWidget.controller == null) _controller = null;
@@ -171,7 +172,8 @@ class _TextFormFieldState extends FormFieldState<String> {
     // notifications for changes originating from within this class -- for
     // example, the reset() method. In such cases, the FormField value will
     // already have been set.
-    if (_effectiveController.text != value)
+    if (_effectiveController.text != value) {
       didChange(_effectiveController.text);
+    }
   }
 }

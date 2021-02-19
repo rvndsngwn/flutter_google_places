@@ -1,3 +1,13 @@
+## 1.0.0-nullsafety.0 - Feb 19, 2021
+
+-   Initial version of `flutter_google_places_hoc081098`.
+    Forked from https://github.com/fluttercommunity/flutter_google_places.
+-   Opt into null safety.
+-   Sdk constraints: >=2.12.0-0 <3.0.0 based on beta release guidelines.
+-   Compatible with flutter beta channel.
+
+# [flutter_google_places](https://github.com/fluttercommunity/flutter_google_places) Changelog
+
 ## 0.2.5
 
 - Updates rxdart to 0.24.0

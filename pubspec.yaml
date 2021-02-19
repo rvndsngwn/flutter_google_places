@@ -1,10 +1,7 @@
-name: flutter_google_places
-description: Google places autocomplete widgets for flutter. No wrapper, use
-  https://pub.dartlang.org/packages/google_maps_webservice
-version: 0.3.0-nullsafety.0
-author: Hadrien Lejard <hadrien.lejard@gmail.com>
-homepage: https://github.com/lejard-h/flutter_google_places
-maintainer: Kev Morelli (@KevMorelli)
+name: flutter_google_places_hoc081098
+description: Google places autocomplete widgets for flutter. No wrapper, use https://pub.dev/packages/google_maps_webservice
+version: 1.0.0-nullsafety.0
+homepage: https://github.com/hoc081098/flutter_google_places.git
 
 environment:
   sdk: ">=2.12.0-0 <3.0.0"
@@ -12,8 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # TODO: google_api_headers
-  google_api_headers: ">=0.1.0 <1.0.0"
+  google_api_headers: ^0.2.0-nullsafety.0
   google_maps_webservice: ^0.0.20-nullsafety.0
   http: ^0.13.0
   rxdart: ^0.26.0-nullsafety.1
@@ -21,16 +17,11 @@ dependencies:
   collection: ^1.15.0
 
 dev_dependencies:
+  pedantic: ^1.10.0
   flutter_test:
     sdk: flutter
 
-dependency_overrides:
-  google_api_headers:
-    git:
-      url: https://github.com/Flutter-Dart-Open-Source/google_api_headers.git
-      ref: null-safety
-
 flutter:
   assets:
-    - packages/flutter_google_places/assets/google_black.png
-    - packages/flutter_google_places/assets/google_white.png
+    - packages/flutter_google_places_hoc081098/assets/google_black.png
+    - packages/flutter_google_places_hoc081098/assets/google_white.png
