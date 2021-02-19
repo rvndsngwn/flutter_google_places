@@ -6,10 +6,11 @@
 - Refactoring by using RxDart for more power.
 
 ```yaml
-flutter_google_places:
-  git:
-    url: https://github.com/hoc081098/flutter_google_places.git
-    ref: feature/restricted-api-keys
+dependency_overrides:
+  flutter_google_places:
+    git:
+      url: https://github.com/hoc081098/flutter_google_places.git
+      ref: 4fefbf5bfe6d7458521710764840f22af2cbbaa8
 ```
 
 # flutter_google_places
