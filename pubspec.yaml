@@ -24,5 +24,5 @@ dev_dependencies:
 
 flutter:
   assets:
-    - packages/flutter_google_places_hoc081098/assets/google_black.png
-    - packages/flutter_google_places_hoc081098/assets/google_white.png
+    - assets/google_black.png
+    - assets/google_white.png
