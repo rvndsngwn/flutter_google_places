@@ -1,17 +1,21 @@
 # flutter_google_places_hoc081098
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Google places autocomplete widgets for flutter.
 
-## Updated by [@hoc081098](https://github.com/hoc081098). See [file changes](https://github.com/fluttercommunity/flutter_google_places/compare/master...hoc081098:main)
+## Updated by [@hoc081098](https://github.com/hoc081098). See [files changed](https://github.com/fluttercommunity/flutter_google_places/compare/master...hoc081098:main)
 
 [![Pub](https://img.shields.io/pub/v/flutter_google_places_hoc081098?include_prereleases)](https://pub.dev/packages/flutter_google_places_hoc081098)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhoc081098%2Fflutter_google_places&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Build example](https://github.com/hoc081098/flutter_google_places/actions/workflows/build-example.yml/badge.svg?branch=main)](https://github.com/hoc081098/flutter_google_places/actions/workflows/build-example.yml)
 
 - Migrated to **null-safety**.
 - Updated dependencies to latest release.
 - Refactoring by using **RxDart** for more power.
 - Fixed many issues.
-- Applied [pedantic](https://pub.dev/packages/pedantic).
+- Applied [flutter_lints](https://pub.dev/packages/flutter_lints).
 - Refactored example, migrated to Android v2 embedding.
 
 ```yaml
@@ -62,3 +66,24 @@ final Prediction? p = await PlacesAutocomplete.show(
 ```
 
 The library use [google_maps_webservice](https://github.com/lejard-h/google_maps_webservice) library which directly refer to the official [documentation](https://developers.google.com/maps/web-services/) for google maps web service. 
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/hoc081098/"><img src="https://avatars.githubusercontent.com/u/36917223?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Petrus Nguyễn Thái Học</b></sub></a><br /><a href="https://github.com/hoc081098/flutter_google_places/commits?author=hoc081098" title="Code">💻</a> <a href="#maintenance-hoc081098" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://corentin.giraud.dev/"><img src="https://avatars.githubusercontent.com/u/29222996?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Corentin Giraud</b></sub></a><br /><a href="https://github.com/hoc081098/flutter_google_places/commits?author=corentingiraud" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
